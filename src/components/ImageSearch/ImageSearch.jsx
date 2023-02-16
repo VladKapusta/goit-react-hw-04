@@ -5,11 +5,16 @@ import { Searchbar } from './Searchbar/Searchbar';
 
 export const ImageSearch = () => {
   const [imagesName, setImagesName] = useState('');
+  const [page, setPage] = useState(null);
+
+  const incrPage = () => {
+    setPage(state => state + 1);
+  };
 
   return (
     <div className="App">
-      <Searchbar onSubmit={imagesName => setImagesName(imagesName)} />
-      <ImageGallery searchName={imagesName} />
+      <Searchbar onSubmit={setImagesName} setPage={setPage}/>
+      <ImageGallery searchName={imagesName} incrPage={incrPage} page={page}/>
       <ToastContainer />
     </div>
   );

@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Searchbar = ({ onSubmit }) => {
+export const Searchbar = ({ onSubmit, setPage }) => {
   const [imagesName, setImagesName] = useState('');
 
   const handelSearchForm = e => {
@@ -21,6 +21,7 @@ export const Searchbar = ({ onSubmit }) => {
       });
       return;
     }
+    setPage(1)
     onSubmit(imagesName);
     setImagesName('');
   };
