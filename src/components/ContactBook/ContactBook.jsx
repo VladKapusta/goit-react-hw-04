@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import { ReactComponent as IconAdd } from './Icons/add.svg';
 import { ReactComponent as IconClose } from './Icons/close.svg';
 
-import { Titel, SubTitel, OpenModal, CloseModal } from './App.styled';
+import { Titel, SubTitel, OpenModal, CloseModal, SectionContactBook } from './App.styled';
 import { Clock } from './Clock/Clock';
 import { ContactsList } from './ContactList/ContactList';
 import { Filter } from './FilterContacts/FilterContacts';
 import { FormAddContact } from './FormaAddContact/FormAddContact';
 import { Modal } from './Modal/Modal';
+
+
 
 export const ContactBook = function () {
   const KEY_LS = 'contacts';
@@ -35,7 +37,7 @@ export const ContactBook = function () {
   };
 
   const toggleModal = () => {
-    setShowModal(prevShowModal => !prevShowModal);
+    setShowModal(state => !state);
   };
 
   const filterListContacts = e => {
@@ -48,7 +50,7 @@ export const ContactBook = function () {
   );
 
   return (
-    <>
+    <SectionContactBook>
       <Titel>PhoneBook</Titel>
       {showModal && (
         <Modal closeModal={toggleModal}>
@@ -74,7 +76,7 @@ export const ContactBook = function () {
       ) : (
         <p>Contact list is empty.</p>
       )}
-    </>
+    </SectionContactBook>
   );
 };
 

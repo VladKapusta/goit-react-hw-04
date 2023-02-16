@@ -10,7 +10,7 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Feedback />
-    <ContactBook/>
-    <ImageSearch/>
+    <ContactBook />
+    <ImageSearch />
   </React.StrictMode>
 );
