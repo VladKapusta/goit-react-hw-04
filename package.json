@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "image-search",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VladKapusta.github.io/goit-react-hw-04/",
+  "homepage": "https://VladKapusta.github.io/goit-react-hw-04-image_search/",
   "dependencies": {
     "@emotion/styled": "^11.10.5",
     "@testing-library/jest-dom": "^5.16.3",
